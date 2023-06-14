@@ -113,6 +113,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             isChecked = !isChecked;
                           });
                         },
+                      ),
+                      Text(
+                        "Remember Me",
+                        style: Styles.textStyle,
                       )
                     ],
                   ),
@@ -148,6 +152,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
+                  Text(
+                    "Register Yourself",
+                    style: Styles.textStyle.copyWith(
+                      color: Colors.white,
+                    ),
+                  )
                 ],
               ))
           //]

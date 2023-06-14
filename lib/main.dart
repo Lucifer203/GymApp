@@ -13,33 +13,39 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
+    return
+        //  MultiProvider(
+        //   providers: [
+        //     ChangeNotifierProvider(
+        //       create: (_) => WorkOuts(),
+        //     ),
+        //   ],
+        //   child:
         ChangeNotifierProvider(
-          create: (_) => WorkOuts(),
-        ),
-      ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            //colorScheme: ColorScheme.fromSeed(seedColor: Colors.black87),
-            useMaterial3: true,
-            primaryColor: Color.fromARGB(229, 13, 12, 12),
-            textTheme: TextTheme(
-                titleMedium: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-            ))
-            // appBarTheme: AppBarTheme(color: Colors.black87),
-            ),
-        //home: "/",
-        initialRoute: "/",
-        routes: {
-          "/": (context) => LoginScreen(),
-          LoginScreen.routeName: (context) => LoginScreen(),
-        },
-      ),
-    );
+            create: (context) => WorkOuts(),
+            builder: (context, child) => MaterialApp(
+                  title: 'Flutter Demo',
+                  theme: ThemeData(
+                      //colorScheme: ColorScheme.fromSeed(seedColor: Colors.black87),
+                      useMaterial3: true,
+                      primaryColor: Color.fromARGB(229, 13, 12, 12),
+                      textTheme: TextTheme(
+                          titleMedium: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ))
+                      // appBarTheme: AppBarTheme(color: Colors.black87),
+                      ),
+                  //home: "/",
+                  initialRoute: "/",
+                  routes: {
+                    "/": (context) => LoginScreen(),
+                    LoginScreen.routeName: (context) => LoginScreen(),
+                  },
+                ))
+
+        //)
+        ;
   }
 }
 
