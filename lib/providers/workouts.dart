@@ -11,6 +11,13 @@ class WorkOuts with ChangeNotifier {
       description: "This is push pull leg workout split",
       imageUrl: 'https://images.app.goo.gl/ZMXHjdJDbCgEbUAR8',
     ),
+    WorkOut(
+      id: 'w1',
+      title: "Push-Pulls",
+      days: 5,
+      description: "This is push pull leg workout split",
+      imageUrl: 'https://images.app.goo.gl/ZMXHjdJDbCgEbUAR8',
+    ),
   ];
 
   List<WorkOut> get splits {

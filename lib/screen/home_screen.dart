@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gymapp/screen/addWorkout.dart';
 import 'package:gymapp/utils/app_styles.dart';
 import 'package:gymapp/widgets/workout_list.dart';
 import '../widgets/app_drawer.dart';
@@ -17,28 +18,42 @@ class HomeScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.titleMedium,
         ),
         backgroundColor: Theme.of(context).primaryColor,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => AddWorkOut(),
+              ));
+            },
+            icon: Icon(Icons.add),
+          ),
+        ],
       ),
       drawer: Drawer(
         backgroundColor: Theme.of(context).primaryColor,
         child: myDrawer(),
       ),
-      body: Center(
-        // child: Column(
-        //   children: [
-        //     Text(
-        //       "Workout Splits",
-        //       style: Styles.headLineStyle1,
-        //     ),
-        //     Container(
-        //       margin: EdgeInsets.all(10),
-        //       height: 150,
-        //       width: double.infinity,
-        //       decoration: BoxDecoration(
-        //           color: Colors.white, borderRadius: BorderRadius.circular(25)),
-        //     )
-        //   ],
-        // ),
-        child: WorkoutList(),
+      body:
+          // child: Column(
+          //   children: [
+          //     Text(
+          //       "Workout Splits",
+          //       style: Styles.headLineStyle1,
+          //     ),
+          //     Container(
+          //       margin: EdgeInsets.all(10),
+          //       height: 150,
+          //       width: double.infinity,
+          //       decoration: BoxDecoration(
+          //           color: Colors.white, borderRadius: BorderRadius.circular(25)),
+          //     )
+          //   ],
+          // ),
+
+          Center(
+        child: Container(
+          child: WorkoutList(),
+        ),
       ),
     );
   }

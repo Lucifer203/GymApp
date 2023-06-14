@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class WorkOut with ChangeNotifier {
+class WorkOut  {
   final String id;
   final String title;
   final int days;
