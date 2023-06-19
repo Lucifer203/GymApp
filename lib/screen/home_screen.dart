@@ -19,13 +19,16 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Theme.of(context).primaryColor,
         actions: [
-          IconButton(
+          TextButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => AddWorkOut(),
               ));
             },
-            icon: Icon(Icons.add),
+            child: Text(
+              "Add Workout",
+              style: Styles.textStyle.copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
